@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "PM25Data.h"
+
+NSString *const PM25IN_KEY = @"5j1znBVAsnSf5xQyNQyq";
 
 @interface ViewController ()
 
@@ -16,12 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"pm2_5" ofType:@"json"];
+    NSString *jsonString = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+    PM25Data *pmData = [[PM25Data alloc] initWithJSON:jsonString];
+    NSLog(@"%@", pmData.description);
 }
 
 @end

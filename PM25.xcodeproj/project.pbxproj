@@ -13,6 +13,8 @@
 		948BD7F41CA3EE9400272FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F21CA3EE9400272FC0 /* Main.storyboard */; };
 		948BD7F61CA3EE9400272FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F51CA3EE9400272FC0 /* Assets.xcassets */; };
 		948BD7F91CA3EE9400272FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F71CA3EE9400272FC0 /* LaunchScreen.storyboard */; };
+		94C8EF7A1CA41D3C005BC25B /* PM25Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8EF791CA41D3C005BC25B /* PM25Data.m */; };
+		94C8EF7C1CA41E1F005BC25B /* pm2_5.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C8EF7B1CA41E1F005BC25B /* pm2_5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		948BD7F51CA3EE9400272FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		948BD7F81CA3EE9400272FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		948BD7FA1CA3EE9400272FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C8EF781CA41D3C005BC25B /* PM25Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PM25Data.h; sourceTree = "<group>"; };
+		94C8EF791CA41D3C005BC25B /* PM25Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PM25Data.m; sourceTree = "<group>"; };
+		94C8EF7B1CA41E1F005BC25B /* pm2_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pm2_5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +67,13 @@
 				948BD7ED1CA3EE9400272FC0 /* AppDelegate.m */,
 				948BD7EF1CA3EE9400272FC0 /* ViewController.h */,
 				948BD7F01CA3EE9400272FC0 /* ViewController.m */,
+				94C8EF781CA41D3C005BC25B /* PM25Data.h */,
+				94C8EF791CA41D3C005BC25B /* PM25Data.m */,
 				948BD7F21CA3EE9400272FC0 /* Main.storyboard */,
 				948BD7F51CA3EE9400272FC0 /* Assets.xcassets */,
 				948BD7F71CA3EE9400272FC0 /* LaunchScreen.storyboard */,
 				948BD7FA1CA3EE9400272FC0 /* Info.plist */,
+				94C8EF7B1CA41E1F005BC25B /* pm2_5.json */,
 				948BD7E91CA3EE9400272FC0 /* Supporting Files */,
 			);
 			path = PM25;
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				948BD7F91CA3EE9400272FC0 /* LaunchScreen.storyboard in Resources */,
+				94C8EF7C1CA41E1F005BC25B /* pm2_5.json in Resources */,
 				948BD7F61CA3EE9400272FC0 /* Assets.xcassets in Resources */,
 				948BD7F41CA3EE9400272FC0 /* Main.storyboard in Resources */,
 			);
@@ -152,6 +161,7 @@
 				948BD7F11CA3EE9400272FC0 /* ViewController.m in Sources */,
 				948BD7EE1CA3EE9400272FC0 /* AppDelegate.m in Sources */,
 				948BD7EB1CA3EE9400272FC0 /* main.m in Sources */,
+				94C8EF7A1CA41D3C005BC25B /* PM25Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +310,7 @@
 				948BD7FF1CA3EE9400272FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

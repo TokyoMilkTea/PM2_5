@@ -1,0 +1,11 @@
+[
+    {
+        "aqi": 40,
+        "area": "\u5e7f\u5dde",
+        "pm2_5": 25,
+        "pm2_5_24h": 14,
+        "primary_pollutant": "",
+        "quality": "\u4f18",
+        "time_point": "2016-03-24T20:00:00Z"
+    }
+]
