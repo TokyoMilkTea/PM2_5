@@ -10,7 +10,7 @@
 
 @interface PM25Data : NSObject
 
-@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *area;
 @property (nonatomic, assign) NSInteger pm25;
 @property (nonatomic, copy) NSString *quality;
 

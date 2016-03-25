@@ -17,7 +17,7 @@
         NSError *error = nil;
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
         for (NSDictionary *dic in array) {
-            self.city = dic[@"area"];
+            self.area = dic[@"area"];
             self.pm25 = [(NSString *)dic[@"pm2_5"] integerValue];
             self.quality = dic[@"quality"];
         }
@@ -26,7 +26,7 @@
 }
 
 - (NSString *)description {
-    NSString *area = self.city;
+    NSString *area = self.area;
     NSString *pm25 = [NSString stringWithFormat:@"%ld", (long)self.pm25];
     NSString *quality = self.quality;
     return [NSString stringWithFormat:@"城市: %@, pm2.5: %@, 空气质量: %@", area, pm25, quality];

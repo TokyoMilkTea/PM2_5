@@ -13,9 +13,25 @@
 		948BD7F41CA3EE9400272FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F21CA3EE9400272FC0 /* Main.storyboard */; };
 		948BD7F61CA3EE9400272FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F51CA3EE9400272FC0 /* Assets.xcassets */; };
 		948BD7F91CA3EE9400272FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948BD7F71CA3EE9400272FC0 /* LaunchScreen.storyboard */; };
+		94B49DAC1CA531B200D2D27A /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B49DAB1CA531B200D2D27A /* Masonry.framework */; };
+		94B49DAD1CA531B200D2D27A /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94B49DAB1CA531B200D2D27A /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94C8EF7A1CA41D3C005BC25B /* PM25Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8EF791CA41D3C005BC25B /* PM25Data.m */; };
 		94C8EF7C1CA41E1F005BC25B /* pm2_5.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C8EF7B1CA41E1F005BC25B /* pm2_5.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94B49DAE1CA531B200D2D27A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				94B49DAD1CA531B200D2D27A /* Masonry.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		948BD7E61CA3EE9400272FC0 /* PM25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PM25.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +44,7 @@
 		948BD7F51CA3EE9400272FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		948BD7F81CA3EE9400272FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		948BD7FA1CA3EE9400272FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B49DAB1CA531B200D2D27A /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Masonry.framework; path = Carthage/Build/iOS/Masonry.framework; sourceTree = "<group>"; };
 		94C8EF781CA41D3C005BC25B /* PM25Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PM25Data.h; sourceTree = "<group>"; };
 		94C8EF791CA41D3C005BC25B /* PM25Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PM25Data.m; sourceTree = "<group>"; };
 		94C8EF7B1CA41E1F005BC25B /* pm2_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pm2_5.json; sourceTree = "<group>"; };
@@ -38,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B49DAC1CA531B200D2D27A /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +65,7 @@
 		948BD7DD1CA3EE9400272FC0 = {
 			isa = PBXGroup;
 			children = (
+				94B49DAB1CA531B200D2D27A /* Masonry.framework */,
 				948BD7E81CA3EE9400272FC0 /* PM25 */,
 				948BD7E71CA3EE9400272FC0 /* Products */,
 			);
@@ -97,6 +116,7 @@
 				948BD7E21CA3EE9400272FC0 /* Sources */,
 				948BD7E31CA3EE9400272FC0 /* Frameworks */,
 				948BD7E41CA3EE9400272FC0 /* Resources */,
+				94B49DAE1CA531B200D2D27A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PM25/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = local.wxy.PM25;
@@ -284,6 +308,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PM25/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = local.wxy.PM25;
