@@ -8,9 +8,8 @@
 
 #import "ViewController.h"
 #import "PM25Data.h"
+#import "APIManager.h"
 @import Masonry;
-
-NSString *const PM25IN_KEY = @"5j1znBVAsnSf5xQyNQyq";
 
 @interface ViewController ()
 
@@ -49,9 +48,14 @@ NSString *const PM25IN_KEY = @"5j1znBVAsnSf5xQyNQyq";
 
 #pragma mark - private methods
 - (void)setupData {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"pm2_5" ofType:@"json"];
-    NSString *jsonString = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
-    self.pm2_5Data = [[PM25Data alloc] initWithJSON:jsonString];
+//    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"pm2_5" ofType:@"json"];
+//    NSString *jsonString = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+//    self.pm2_5Data = [[PM25Data alloc] initWithJSON:jsonString];
+    [[APIManager sharedInstance] getPM2_5InArea:@"西安" success:^(PM25Data *data) {
+        NSLog(@"%@", data.description);
+    } failure:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)setupUI {

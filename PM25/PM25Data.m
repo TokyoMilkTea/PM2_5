@@ -15,11 +15,17 @@
     if (self) {
         NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error = nil;
-        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-        for (NSDictionary *dic in array) {
-            self.area = dic[@"area"];
-            self.pm25 = [(NSString *)dic[@"pm2_5"] integerValue];
-            self.quality = dic[@"quality"];
+        id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        if ([json isKindOfClass:[NSArray class]]) {
+            for (NSDictionary *dic in json) {
+                self.area = dic[@"area"];
+                self.pm25 = [(NSString *)dic[@"pm2_5"] integerValue];
+                self.quality = dic[@"quality"];
+            }
+        } else {
+            for (NSString *key in json) {
+                NSLog(@"%@ : %@", key, [json objectForKey:key]);
+            }
         }
     }
     return self;

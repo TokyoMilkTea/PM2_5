@@ -17,6 +17,7 @@
 		94B49DAD1CA531B200D2D27A /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94B49DAB1CA531B200D2D27A /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94C8EF7A1CA41D3C005BC25B /* PM25Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C8EF791CA41D3C005BC25B /* PM25Data.m */; };
 		94C8EF7C1CA41E1F005BC25B /* pm2_5.json in Resources */ = {isa = PBXBuildFile; fileRef = 94C8EF7B1CA41E1F005BC25B /* pm2_5.json */; };
+		94F37F661CA625F800A7B412 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F37F651CA625F800A7B412 /* APIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		94C8EF781CA41D3C005BC25B /* PM25Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PM25Data.h; sourceTree = "<group>"; };
 		94C8EF791CA41D3C005BC25B /* PM25Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PM25Data.m; sourceTree = "<group>"; };
 		94C8EF7B1CA41E1F005BC25B /* pm2_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pm2_5.json; sourceTree = "<group>"; };
+		94F37F641CA625F800A7B412 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		94F37F651CA625F800A7B412 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +89,9 @@
 				948BD7ED1CA3EE9400272FC0 /* AppDelegate.m */,
 				948BD7EF1CA3EE9400272FC0 /* ViewController.h */,
 				948BD7F01CA3EE9400272FC0 /* ViewController.m */,
-				94C8EF781CA41D3C005BC25B /* PM25Data.h */,
-				94C8EF791CA41D3C005BC25B /* PM25Data.m */,
-				948BD7F21CA3EE9400272FC0 /* Main.storyboard */,
-				948BD7F51CA3EE9400272FC0 /* Assets.xcassets */,
-				948BD7F71CA3EE9400272FC0 /* LaunchScreen.storyboard */,
-				948BD7FA1CA3EE9400272FC0 /* Info.plist */,
-				94C8EF7B1CA41E1F005BC25B /* pm2_5.json */,
+				94F37F671CA625FF00A7B412 /* Network */,
+				94F37F621CA6253E00A7B412 /* Model */,
+				94F37F631CA6254D00A7B412 /* Resources */,
 				948BD7E91CA3EE9400272FC0 /* Supporting Files */,
 			);
 			path = PM25;
@@ -104,6 +103,36 @@
 				948BD7EA1CA3EE9400272FC0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94F37F621CA6253E00A7B412 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94C8EF781CA41D3C005BC25B /* PM25Data.h */,
+				94C8EF791CA41D3C005BC25B /* PM25Data.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		94F37F631CA6254D00A7B412 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				948BD7F21CA3EE9400272FC0 /* Main.storyboard */,
+				948BD7F51CA3EE9400272FC0 /* Assets.xcassets */,
+				948BD7F71CA3EE9400272FC0 /* LaunchScreen.storyboard */,
+				948BD7FA1CA3EE9400272FC0 /* Info.plist */,
+				94C8EF7B1CA41E1F005BC25B /* pm2_5.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		94F37F671CA625FF00A7B412 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94F37F641CA625F800A7B412 /* APIManager.h */,
+				94F37F651CA625F800A7B412 /* APIManager.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +211,7 @@
 				948BD7EE1CA3EE9400272FC0 /* AppDelegate.m in Sources */,
 				948BD7EB1CA3EE9400272FC0 /* main.m in Sources */,
 				94C8EF7A1CA41D3C005BC25B /* PM25Data.m in Sources */,
+				94F37F661CA625F800A7B412 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
